@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="angular.min.js"></script>
+	<script>
+		var helloApp = angular.module("helloApp", []);
+		helloApp.controller("HelloCtrl", function($scope) {
+			$scope.userName = "HariKrishna";
+		});
+	</script>
+</head>
+<body>
+	<div ng-app="helloApp" ng-controller="HelloCtrl">
+		<input type="text" name="userName" ng-model="userName">
+		{{userName}}
+		<div ng-bind="userName"> </div>
+	</div>
+</body>
+</html>
