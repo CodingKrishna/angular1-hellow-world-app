@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Document</title>
+	<link rel="stylesheet" href="style.css">
 	<script src="angular.min.js"></script>
-	<script>
-		var helloApp = angular.module("helloApp", []);
-		helloApp.controller("HelloCtrl", function($scope) {
-			$scope.userName = "HariKrishna";
-		});
-	</script>
+	<script src="main.js"></script>
 </head>
 <body>
-	<div ng-app="helloApp" ng-controller="HelloCtrl">
-		<input type="text" name="userName" ng-model="userName">
-		{{userName}}
-		<div ng-bind="userName"> </div>
+	<div class="main" ng-app="helloApp" ng-controller="HelloCtrl">
+		<div> <h2 class="header"> {{appTitle}} </h2> </div>
+		<div class="registration-form-content">
+			<form action="" method="get">
+				<div> <label> User Name</label> <input type="text" name="userName" ng-model="userName"> </div>
+				<div> <label> Email </label> <input type="email" name="email" ng-model="email"> </div>
+				<div> <label> Mobile Number</label> <input type="number" name="mobileNo" ng-model="mobileNo"> </div>
+				<div> <input type="submit" value="Submit"> </div>
+			</form>
+			<div>
+				<div> User Name </div>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
